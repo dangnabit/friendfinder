@@ -21,8 +21,6 @@ app.use(bodyParser.json({
 
 app.use(express.static('public'));
 
-
-
 app.use(require('./app/routing/apiRoutes.js'));
 app.use(require('./app/routing/htmlRoutes.js'));
 
