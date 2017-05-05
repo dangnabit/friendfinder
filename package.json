@@ -1,0 +1,24 @@
+{
+  "name": "friendfinder",
+  "version": "1.0.0",
+  "description": "FriendFinder is a Webapp for finding your most compatible friend!",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dangnabit/friendfinder.git"
+  },
+  "author": "Dan Gabel",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dangnabit/friendfinder/issues"
+  },
+  "homepage": "https://github.com/dangnabit/friendfinder#readme",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2"
+  }
+}
