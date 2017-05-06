@@ -1,11 +1,12 @@
-const bodyParser = require('body-parser');
-const express = require('express');
-const path = require('path');
+var bodyParser = require('body-parser');
+var express = require('express');
+var path = require('path');
 
-const app = express();
-const PORT = 3000;
+var app = express();
 
-let friends = require('./app/data/friends.js');
+app.set('port', (process.env.PORT || 3000));
+
+var friends = require('./app/data/friends.js');
 
 app.use(bodyParser.json());
 
@@ -24,6 +25,6 @@ app.use(express.static('public'));
 app.use(require('./app/routing/apiRoutes.js'));
 app.use(require('./app/routing/htmlRoutes.js'));
 
-app.listen(PORT, function(){
-	console.log('Server running on port: ' + PORT);
+app.listen(app.get('port'), function(){
+	console.log('Server running on port: ' + app.get('port'));
 });
